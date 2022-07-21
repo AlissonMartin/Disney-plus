@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end   ;
+    gap: 13px;
+}
+
+.bar {
+    border: 2px solid white;
+    border-radius: 2px;
+    width: 46px;
+    background-color: white;
+}
+
+.bar--half {
+    width: 23px;
+}

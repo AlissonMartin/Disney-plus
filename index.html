@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Disney Plus</title>
+    <meta name="description" content="Plataforma do disney plus" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/jpg" href="./assets/favicon.ico" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLE LINK -->
+    <link rel="stylesheet" href="./styles/global.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header" onclick="">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Logo disney plus">
+        </div>
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar bar--half"></div>
+        </div>
+      </header>
+      <main>
+        <section class="movie">
+          <div class="rating">
+            <img src="assets/logo-imdb.png" alt="logo imdb"> <span><strong>8.8</strong></span>
+          </div>
+          <div class="info"></div>
+          <h1 class="movie__title"></h1>
+          <div class="desc"></div>
+          <button class="button">
+            <img src="assets/icon-play.png" alt=""> Watch Now
+          </button>
+        </section>
+        <aside class="movies">
+          <h2>Movies</h2>
+          <div>
+            <ul class="movies__list">
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
