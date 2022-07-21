@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: flex-end   ;
     gap: 13px;
+    transition: all ease .3s;
 }
 
 .bar {
@@ -18,8 +19,31 @@
     border-radius: 2px;
     width: 46px;
     background-color: white;
+    transition: all ease .3s;
 }
 
 .bar--half {
     width: 23px;
+}
+
+.hamburger.active {
+    display: fixed;
+    z-index: 99;
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg) translateY(23px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar--half {
+    width: 46px;
+    transform: rotate(45deg) translateY(-23px);;
+}
+
+.hamburger:hover {
+    cursor: pointer;
 }

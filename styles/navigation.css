@@ -1,0 +1,91 @@
+.navigation {
+    position: fixed;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    right: -100%;
+    top: 0;
+    width: 700px;
+    height: 100%;
+    padding: 40px;
+    transition: all ease .5s;
+}
+
+.navigation h2 {
+    margin-top: 60px;
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+    font-weight: 700;
+}
+
+.movies__list {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    list-style:none;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.navigation li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    width: 265px;
+    height: 150px;
+    padding-bottom: 16px;
+    padding-left: 10px;
+    border-radius: 6px;
+}
+
+.navigation span {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.navigation li strong {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+}
+
+.navigation li button {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all ease .3s;
+}
+
+.navigation li:hover button {
+    opacity: 1;
+}
+
+.movies__list::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+/* Track */
+.movies__list::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255, 0.4);
+}
+
+/* Handle */
+.movies__list::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+.navigation.active {
+    opacity: 1;
+    right: 0;
+}

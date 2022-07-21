@@ -2,7 +2,7 @@ const moviesArray = ['508943', '527774', '277834', '335797', '269149', '150540',
 
 
 function getUrlMovie(movieId) {
-    return `https://api.themoviedb.org/3/movie/${movieId}?language=pt-br&api_key=d6387229f94b0ae820a6b2b8501849cc`
+    return `https://api.themoviedb.org/3/movie/${movieId}?language=en&api_key=d6387229f94b0ae820a6b2b8501849cc`
 }
 
 // Script para inicializar os dados do movie principal
@@ -35,7 +35,7 @@ function setFeaturedMovie(movieId) {
 
     movieTitle.innerHTML = json.original_title
     movieRating.innerHTML = json.vote_average
-    movieInfo.innerHTML = yearRelease + ' - ' + json.genres[0].name + ' -  Filme'
+    movieInfo.innerHTML = yearRelease + ' - ' + json.genres[0].name + ' -  Movie'
     movieDesc.innerHTML = json.overview
     backgroundImg.style.backgroundImage = `linear-gradient(90.18deg, rgba(13, 22, 46, 0.7) 23.21%, rgba(13, 22, 46, 0.0001) 96.69%), url(https://image.tmdb.org/t/p/original${json.backdrop_path})`
 })
@@ -49,3 +49,12 @@ function loadListMovies() {
 loadListMovies()
 
 setFeaturedMovie(moviesArray[0])
+
+// Navigation menu
+
+function changeButtonMenu() {
+    const button = document.querySelector('.hamburger')
+    const nav = document.querySelector('.navigation')
+    button.classList.toggle('active')
+    nav.classList.toggle('active')
+}
